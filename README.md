@@ -1,6 +1,6 @@
 # OpenDoor - Github 
 #### Class: CS 477
-#### Team:  OpenDoor                       
+#### Team:  OpenDoor                       Jessica's Edit
 --------------------------------------------------------------------------------
 *note: this file is written using markdown.  Please edit it using the markdown syntax, described here:  
 [Extensive Syntax](http://daringfireball.net/projects/markdown/syntax)  
