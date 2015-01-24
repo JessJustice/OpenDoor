@@ -26,3 +26,4 @@ Command						|Result
 :-----------------------	|:------------------------------------------------------
 `git init MyProject`		|initialize a new git repository in the current directory named *MyProject*
 
+I edited this in GITHUB.  Blarg!
