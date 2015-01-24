@@ -50,7 +50,7 @@ Command                     |Result
 `git branch -D NewBranch`  	|forces a deletion of the specified branch (careful not to delete your work)
 `gitk`		                  		|launches a gui describing the changes of your project.
 
-#### 3. Pulling changes from a server
+#### 3. Pulling changes
 Command	               			     |Result
 :-----------------------	      |:------------------------------------------------------
 `git clone <url or path>`     	|grab the repository and put it in the current directory
@@ -60,7 +60,7 @@ Command	               			     |Result
 `git remote add origin <url>`	 |set the url that origin points to.  For instance: your github project url. (needs to be used sometimes when first setting up a project)
 `git remote -v`		              |view the details of your remote settings.
 
-#### 4. Pushing changes to a server
+#### 4. Pushing changes
 Command	                           			|Result
 :----------------------------------- 	|:------------------------------------------------------
 `git push`                         			|push your committed changes to the server (may require more options to work properly)
