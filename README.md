@@ -10,9 +10,9 @@ Hi team!  I set up this git repository so we can all contribute helpful stuff
 to one area.  Place whatever files we want to share with each other here.
 
 ### Connect to this git repository
-
-This 
-    git clone http://www.mywebsite.com/whatever
+ 
+```git clone https://github.com/aaroncarsonart/OpenDoor.git```
+    
 
 
 ---------------------------------------------------------------------------------
@@ -22,7 +22,7 @@ Like the `linuxCommands.md` file, read and contribute to this file to help every
 
 Here are some helpful linux commands I know.  Feel free to add (guess at the table syntax):
 
-Command					|Result
+Command						|Result
 :-----------------------	|:------------------------------------------------------
 `git init MyProject`		|initialize a new git repository in the current directory named *MyProject*
 
