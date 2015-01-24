@@ -1,0 +1,723 @@
+OpenDoor - chat log 3     (10/23/2015 @ 8pm-10pm)     Aaron, Eli, Jessica, Ethan
+--------------------------------------------------------------------------------
+aaroncarson: hi
+eli_gas: i have linix installed, and im caught up in the open source hw, and the senior project hw
+jessica_: nice
+jessica_: your dev enviro is set up?
+aaroncarson: Sweet.  Looks like I’m the last one in the meeting
+eli_gas: not milestone 2 though, still working on that
+aaroncarson: Hey everyone, please go to https://github.com/aaroncarsonart/OpenDoor and follow my instructions on that page
+aaroncarson: for how to download my git file.  Just put it wherever you like by running the command I recommended
+aaroncarson: I figured it would be a good place to start.  there’s two files there written in markdown we can add to.  One is about git, the other about linux
+aaroncarson: If everyone can download it, and figure out how to create a branch and push an update, that would be a swell use of our meeting
+eli_gas: thats great man
+Ethan_E: coolio
+jessica_: K, I'll have to do it later, I'm in windows right now.
+eli_gas: me too
+Ethan_E: me too 
+jessica_: Or I can log off and meet you back here.
+aaroncarson: download link you guys
+aaroncarson: Git-1.9.5-preview20141217
+aaroncarson: sorry
+aaroncarson: http://git-scm.com/download/win
+aaroncarson: get to work 
+aaroncarson: plz
+jessica_ left the chat room. (Remote host closed the connection)
+eli_gas: ugh, if we must 
+jessica_ joined the chat room.
+jessica_: warning! If I log off and switch to Linux, I have windows updates that will install. Last night it took over an hour just to shut down properly...
+aaroncarson: I have been trying to wrap my head around some git stuff, I can try to coach people through more basics if possible.  We discussed going over this in our meeting anyways
+aaroncarson: You can do it either way, Jess.  May as well try it on windows too, though I’m not sure if it is all the same probably is)
+Ethan_E: I'm switching to linux rn...
+jessica_ left the chat room. (Remote host closed the connection)
+Ethan_E: can I just "sudo apt-get git"?
+aaroncarson: not on windows
+aaroncarson: on Linux, yes
+Ethan_E: ubuntu?
+Ethan_E: is that it? "git"?
+aaroncarson: yes, I jsut did
+aaroncarson: on my Mint
+aaroncarson: it should be the same
+eli_gas: aaron,  can you do the log this week
+Ethan_E: it didn't work 
+aaroncarson: sudo apt-get install git
+Ethan_E: there we go 
+Ethan_ joined the chat room.
+aaroncarson: all you have to run after you install git is this command where you want to local repository:
+aaroncarson: git clone https://github.com/aaroncarsonart/OpenDoor.git
+Ethan_: well this is
+Ethan_E: awkward...
+aaroncarson: 2 logins, strange
+Ethan_: 2 comps 
+eli_gas: done
+aaroncarson: no need to create an enclosing folder either, the clone makes a top-level directory called OpenDoor
+aaroncarson: once it’s in there, you can `cd OpenDoor`
+aaroncarson: then start a new branch
+aaroncarson: do the command `git branch MyNewBranch` or some useful name
+aaroncarson: then switch to the branch with git checkout MyNewBranch
+aaroncarson: check that you’ve switched with `git branch`
+aaroncarson: then add a new file, or edit one of the text files.
+aaroncarson: Once you’re happy with your edits, you can save your work to your local branch by doing `git add .` to add new files
+aaroncarson: then do `git commit -a -m “A description of your changes”` and your repository is ready to be uploaded
+aaroncarson: Let me know if anyone has issues up to that point
+Ethan_: how long should it take to make a branch?
+aaroncarson: instantaneous, or fast
+aaroncarson: there’s 2 text files
+jessica joined the chat room.
+aaroncarson: Hi jessica
+Ethan_: ok, it was because I had an apostrophe in it 
+jessica: Hello!
+aaroncarson: can you see our previous messages
+aaroncarson: or should I repost them
+jessica: nope
+aaroncarson: ok
+aaroncarson: so first, please grab the branch with
+eli_gas: im in a branch,
+jessica: nope, I can't see them
+aaroncarson: git clone https://github.com/aaroncarsonart/OpenDoor.git
+aaroncarson: next run: cd OpenDoor
+jessica: ok... I'm assuming I need to do something to get git first?
+aaroncarson: if you haven’t installed git,
+aaroncarson: run: sudo apt-get install git
+aaroncarson: what was that, eli?
+Ethan_: to git git 
+eli_gas: just hanging out in my branch
+Ethan_: ya, how do we edit the files?
+aaroncarson: have you edited a file, or created a new file in the directory
+aaroncarson: ok
+aaroncarson: so, you can type: gedit README.md
+aaroncarson: and it will open README.md in gedit
+aaroncarson: then edit, save, and go back to terminal
+Ethan_: so, if I open it in the file editor?
+Ethan_: is that ok?
+aaroncarson: yeah
+aaroncarson: you can use any method you like to edit the file
+aaroncarson: you can also use your normal file browser, if you like it
+aaroncarson: the gui
+aaroncarson: git manages the file system, regardless of how you access it
+aaroncarson: you can also be fancy and use one of the methods I recommended in the linuxHelp.md file
+aaroncarson: But I’d just play with those later
+aaroncarson: let me know when you’re done installing, Jessica
+jessica: git is installed
+aaroncarson: ok, run the git clone command i posted earlier
+aaroncarson: in the directory you want your local repository
+aaroncarson: it can go anywhere
+aaroncarson: If you don’t know, I might recommend /usr/yourname/code
+jessica: local repository as in ~?
+aaroncarson: type: cd ~
+aaroncarson: then I would do: mkdir code
+jessica: k
+aaroncarson: cd code
+Ethan_: or mkdir git
+aaroncarson: yeah
+Ethan_: and cd git 
+aaroncarson: then do
+aaroncarson: it clone https://github.com/aaroncarsonart/OpenDoor.git
+jessica: ~/code
+aaroncarson: sorry
+jessica: :
+aaroncarson: git clone https://github.com/aaroncarsonart/OpenDoor.git
+jessica: ls
+jessica: haha, sorry, wrong box...
+aaroncarson: eli: now that you’re probably edited stuff, you need to push the file to github.  But first, I think you all need a github account
+aaroncarson: so you have to go to the website, and sign up if you haven’t already
+aaroncarson: note your username, email, and password when you do
+eli_gas: i did it when i did the tut i thought but its saying not
+jessica: I'm at jessica ~/code
+aaroncarson: run the command i posted earlier
+jessica: there's nothing in it. Is this the local repostitory you talked about
+Ethan_: coolio
+aaroncarson: the git clone
+aaroncarson: then ls
+Ethan_: I made a "silly" edit to the README file 
+aaroncarson: let’s wait just a second to get on the same page here
+aaroncarson: status?
+eli_gas: creating git hub account
+aaroncarson: gotcha
+eli_gas: done
+jessica: just a minute...
+aaroncarson: if your local edits are done (for eli and ethan), you can run the command: git add .
+Ethan_: done
+Ethan_: and committed
+aaroncarson: ok
+Ethan_E left the chat room. (Remote host closed the connection)
+aaroncarson: then, you have to set up a remote connection
+Ethan_: ?
+jessica: oh my gosh.  Anybody know how to fix an iPhone?  My daughter locked herself out
+Ethan_:
+jessica: Seriously.
+aaroncarson: get remote add origin https://github.com/aaroncarsonart/OpenDoor.git
+aaroncarson: sorry, git not get
+Ethan_: what?
+aaroncarson: git remote add origin https://github.com/aaroncarsonart/OpenDoor.git
+aaroncarson: run that command
+eli_gas: im getting sh.exe not found error when i try to open the file
+aaroncarson: hmm, are you working on windows, eli?
+Ethan_: "remote origin already exists."
+eli_gas: yup
+aaroncarson: ok
+aaroncarson: well, I had to do it, maybe because I set it up originally
+aaroncarson: git push origin <your branch name>
+aaroncarson: that command pushes it onto github
+aaroncarson: you need to type your username and password
+aaroncarson: you may get an error where you need to set your git username and email on your local machine
+aaroncarson: if you do, run
+aaroncarson: git config —global user.email <your email>
+eli_gas: did that
+Ethan_: ya I did that
+aaroncarson: and then also for username
+eli_gas: yup
+aaroncarson: did the push work?
+Ethan_: hmm
+aaroncarson: I’m still not 100% sure how that works
+Ethan_: I don't think it's liking my un...
+aaroncarson: I may need to create a pull request, I’m trying to learn about stuff
+eli_gas: same
+eli_gas: we all are
+aaroncarson: ok, one second
+Ethan_: done
+aaroncarson: jessica, are you ready to do something
+Ethan_: pushed
+jessica: K. I did the clone
+Ethan_: create a branch now
+Ethan_: git branch "branch name"
+Ethan_: (with no quotes xD)
+aaroncarson: ethan, yours worked?
+Ethan_: ya
+jessica: what is the branch name?
+Ethan_: make one up
+aaroncarson: Ethan, please enter: git remote -v
+jessica: fatal not a git repository
+aaroncarson: I want to know where you pushed to, I don’t see updates from you on the site
+aaroncarson: jessica
+aaroncarson: you need to cd into the repository
+Ethan_: "origin https://github.com/aaroncarsonart/OpenDoor.git (fetch) origin https://github.com/aaroncarsonart/OpenDoor.git (push)"
+aaroncarson: example: cd OpenDoor
+aaroncarson: Ethan: that is the same as mine.  hmm.
+jessica: I thought that's what I did...
+aaroncarson: jessica: pwd
+aaroncarson: then: ls
+Ethan_: open the README file
+Ethan_: I didn't ADD any files... just added to the README
+jessica: I'm in jessica ~/code as I stated before, there is nothing here
+aaroncarson: over you ran the clone, you have nothing in it
+jessica: Wait! Open door is here now
+aaroncarson: ok
+Ethan_: "git clone https://gith
+Ethan_: lol
+aaroncarson: ethan, what was your branch name
+Ethan_: EthansTestBranch
+aaroncarson: Ok, we’re learning here, but I have an idea
+aaroncarson: Ethan, please do: git merge EthansTestBranch
+aaroncarson: that will merge your changes into master
+Ethan_: Already up-to-date.
+aaroncarson: then, do: git branch master
+jessica: where is the repository? I have linux help and readme
+aaroncarson: check that your changes are still there
+Ethan_: 'master' already exists
+aaroncarson: sorry: git checkout master
+aaroncarson: check your changes persisted, then run: git branch -d EthansTestBranch
+aaroncarson: jessica:
+Ethan_: k
+aaroncarson: the repository is OpenDoor.
+Ethan_ is now known as Ethan_E.
+eli_gas: idk
+aaroncarson: if you type: git status
+aaroncarson: you will see you are in the master branch
+aaroncarson: if you type: ls -l, you will see you have a hidden file, .git
+jessica: jessica@jessica-Yoga ~/code/OpenDoor $ git branch "branch one"
+jessica: fatal: 'branch one' is not a valid branch name.
+jessica: jessica@jessica-Yoga ~/code/OpenDoor $
+eli_gas: I am on branch EliGaseous
+aaroncarson: it manages everything, but you don’t care about it
+aaroncarson: ok.
+eli_gas: my working directory is clean and i thnk im trying to pull things into it right?
+Ethan_E: my changes were reverted...
+aaroncarson: I’m going to create a “pull request” on the website for you guys, and see if I can get it to work
+aaroncarson: ethan, switch to the other branch with: git checkout EthansTestBranch
+aaroncarson: your changes should still be there.
+aaroncarson: then re-run: git add .
+aaroncarson: and git commit -a -m”message"
+aaroncarson: oh hey
+aaroncarson: Apparently, it takes a while to see updates, I got your push, ethan
+jessica: now what?
+aaroncarson: oh wait, nevermind
+aaroncarson: It was what I made
+eli_gas: lol
+aaroncarson: Ethan, if you figure out your merges, let me know
+aaroncarson: ok jessica, edit one of the files, or make a new one
+Ethan_E: nothing to commit
+aaroncarson: you can use the regular file manager to do it
+aaroncarson: or you can do: gedit README.md and make changes
+jessica: a file in .git
+aaroncarson: ethan: git diff
+aaroncarson: or: git diff --cached
+aaroncarson: jessica: yes
+aaroncarson: this excercise is to see if we can update the files on the github server
+Ethan_E: git diff doesn't do anything...
+Ethan_E: but the changes came back when I changed branches...
+aaroncarson: ethan: are you running it in your master branch, or your separate branch?
+Ethan_E: separate
+aaroncarson: example, run: git branch
+aaroncarson: to see current branch
+aaroncarson: ok
+aaroncarson: are your changes there?
+Ethan_E: ya
+Ethan_E: MY branch shows the changes
+Ethan_E: but I guess I can't push them to the master?
+aaroncarson: ok, let me look in some notes real quick, should have worked
+Ethan_E: (I'm going to post some stuff here of my own when I figure it out ^^)
+eli_gas: i have the files, i opend them in an editor, im trying to  add?
+aaroncarson: eli: the goal is to make changes, don’t delete anything useful, just add a paragraph or some noticable text, then save it.
+eli_gas: no i meant on git
+aaroncarson: jessica:
+eli_gas: i just put my name in the file
+aaroncarson: I forgot a step to tell you
+jessica: how do I back out of branches?
+aaroncarson: please cancel your edit, go back to the terminal
+aaroncarson: wait, did you make a new branch>
+aaroncarson: ?
+eli_gas: omg
+eli_gas: yes
+aaroncarson: what is wrong, eli
+aaroncarson: good or bad omg
+eli_gas: both
+eli_gas: gimme a sec
+aaroncarson: jessica: please type: git branch
+aaroncarson: or if you know your branch, tell me what you are in
+eli_gas: EliGaseous
+jessica: I'm in .git/branches but there's nothing in it
+jessica: just . .. when I do ls -a
+aaroncarson: ok, so I didn’t realize, I needed to add everyone to my github as collaborators
+aaroncarson: please dump your github usernames here
+aaroncarson: so I can add you
+Ethan_E: netwarior
+aaroncarson: I don’t think I’ll see your updates otherwise
+eli_gas: lol
+eli_gas: EliGaseous
+aaroncarson: one r, ethan
+jessica: um... that may be part of the problem. I don't recall...
+jessica: give me a minute
+Ethan_E: (you "lol"ing me?)
+aaroncarson: ok, so Idded ethan and eli.
+aaroncarson: you are now collaborators.  I created an “issue” for each of you to resolve, which you were assigned to.
+aaroncarson: See if you can find it in the website. (this is just exploration here)
+aaroncarson: There is also an unassigned issue.
+aaroncarson: Ethan and eli: you can try a push again to the site, I may have added changes that let you collaborate with me now
+aaroncarson: i mean the terminal comand: git push origin master
+Ethan_E: check that
+aaroncarson: sorry if posting too much, I feel like we’re getting somewhere
+jessica: I need a user name... this a place for a real name, or something spunky?  I want to be easy to network with
+Ethan_E: do you see the edit Aaron?
+aaroncarson: either way
+aaroncarson: hmm, I’m looking around, and I’m not sure.  What did you do, Ethan?
+aaroncarson: did you click on “Issues” (which is the (!) icon on the side)
+aaroncarson: then click on the issue assigned to you, and try to resolve it?
+jessica: JessJustice
+aaroncarson: sweet
+eli_gas: getting it
+aaroncarson: ok, you were added as a collaborator, jessica
+aaroncarson: now, please go to the github page https://github.com/aaroncarsonart/OpenDoor/
+aaroncarson: and go to “issues"
+aaroncarson: and try to close an issue I assigned to you
+aaroncarson: ok Ethan, I responded to your message
+eli_gas: how do i get out of the commit message console
+aaroncarson: are you online, eli
+aaroncarson: oh,
+aaroncarson: I know what you need
+jessica: closed
+aaroncarson: you typed commit -a
+aaroncarson: but didn’t specify a message
+aaroncarson: type a message, then type esc + : + q + enter
+aaroncarson: it’s the vim editor, very strange
+jessica: um... am I supposed to be doing this in terminal or on the website?
+aaroncarson: jess: my command was for the website, no more terminal for now, go to gui
+aaroncarson:
+aaroncarson: So, ethan: try to push to the site again.
+jessica: yay!
+aaroncarson: if you have no edits, make a new one in your custom branch
+aaroncarson: Looks like you closed your issue, jessica.  cool
+eli_gas: vim wasnt letting me go so i closed it
+aaroncarson: Eli: can you find the issues on the website and close the issue I passed you?  type some messages too, fi you want
+eli_gas: but git closed to
+aaroncarson: i’m sorry
+aaroncarson: vim is wierd
+aaroncarson: I’ve gotten stuck there before too, it’s really strange
+jessica: I just wish I used my other email address, this is going to clutter up my inbox fast
+aaroncarson: Also: everyone should put their fancy photos from cs 425 on their github page, so we can be all social
+aaroncarson: ok, Jess: now taht you closed that issue, please go back to the terminal.  Have you edited one of the files and re-saved it, no matter how insignificant?
+Ethan_E: LONGEST IRC CHAT EVAR!!!
+Ethan_E is now known as EthanEiter.
+aaroncarson: BEST IRC CHAT EVAR
+EthanEiter: lol
+EthanEiter: we gettin stuff done
+aaroncarson: I know
+jessica: where?
+aaroncarson: in the repository OpenDoor,
+aaroncarson: have you opened one of the two files with an editor and added something, then saved it?
+jessica: how do I get there on the website?
+aaroncarson: no
+aaroncarson: sorry
+aaroncarson: do it on  your machine now
+jessica: k, how do I get to the repository?
+aaroncarson: what is your directory
+aaroncarson: if you’re in OpenDoor
+aaroncarson: you’re in the repository
+jessica: blahblahblah... .git/branches
+aaroncarson: no
+aaroncarson: sorry
+aaroncarson: you need to: cd ..
+aaroncarson: twice
+jessica: OpenDoor/.git/branches
+aaroncarson: don’t mess with .git
+jessica: that's right!
+aaroncarson: back out until you are in OpenDoor
+eli_gas: im passing out guys
+aaroncarson: lil
+aaroncarson: lol
+aaroncarson: ok, hey thanks for your time eli.
+jessica: k, in just OpenDoor
+aaroncarson: this is more than i expected, we’re just trying stuff out
+eli_gas: aaron, you gotta get the log cause your the only one who didnt log out during the session 
+aaroncarson: don’t worry, I have it
+aaroncarson: Jess: type this
+eli_gas: k, gn guys
+aaroncarson: gedit README.md
+jessica: gedit?
+EthanEiter: later
+eli_gas left the chat room. (Remote host closed the connection)
+EthanEiter: ya
+EthanEiter: gedit's a linux prog
+jessica: edit the markdown, or just something in the file?
+aaroncarson: Ethan, what is your branch again
+aaroncarson: just add some text at the end, or something
+aaroncarson: like, start a new paragraph that says “Jess wuz here”
+aaroncarson: then save
+aaroncarson: and close gedit
+jessica: close the window, or do something in the terminal?
+jessica: done... i think
+aaroncarson: ok.
+aaroncarson: jess, type: “git add .”
+jessica: nothing specified, nothing added
+jessica: oops! I got it
+jessica: next?
+aaroncarson: ok
+aaroncarson: sorry, I was afk
+jessica: no worries
+aaroncarson: umm, then you do commit -a -m “Type a description of what you did here"
+aaroncarson: sorry
+aaroncarson: git commit -a -m “message"
+jessica: I got it the second time, I forgot "." the first
+aaroncarson: sweet
+aaroncarson: so git commit worked?
+jessica: I guess...
+aaroncarson: ok, so do you understand what each command did? i can try to explain, it is helpful to know
+jessica: I can't cd to read me... there must be an open command?
+jessica: gedit
+jessica: ?
+aaroncarson: yes
+aaroncarson: cd is change directory
+aaroncarson: it won’t work on a file
+jessica: k, it's saved on my local machine. I can only assume it was committed
+aaroncarson: so when you ran the git commit command, did it give you feedback that it did stuff
+jessica: no
+jessica: just a new command line
+jessica: but not a warning I got the time before
+aaroncarson: when I run git commit -a -m “something”
+jessica: ?
+aaroncarson: I get the output that says
+aaroncarson: [master cf64615] minor update to README.md
+aaroncarson:  1 file changed, 4 insertions(+), 4 deletions(-)
+jessica: I did git add .
+aaroncarson: ok
+aaroncarson: so please run:
+aaroncarson: git commit -a -m “text"
+EthanEiter: imma git
+EthanEiter:
+aaroncarson: Ethan, the git jokes just won’t stop, will they?
+aaroncarson: Git ‘er done ...
+EthanEiter: no... probly not 
+EthanEiter: later guyz
+EthanEiter: GL
+jessica: please tell me who you are... ugh. it's looking for my email address
+EthanEiter: ya
+EthanEiter: you need email address and a name
+EthanEiter: latahz guyz
+EthanEiter left the chat room. (Remote host closed the connection)
+aaroncarson: ok
+aaroncarson: so, jess, you can type these commands:
+jessica: yep, working on it
+aaroncarson: I have them, unless you found it elsewhere
+aaroncarson: git config —global user.email <your email>
+jessica: it was part of the message
+aaroncarson: oh, ok
+aaroncarson: I forgot about that, lol
+jessica: I didn't get confirmation though
+aaroncarson: when you run the email/username commands?
+jessica: okay. it worked and I got confirmation on the file change
+aaroncarson: cool
+jessica: yeah
+aaroncarson: please type: git branch
+aaroncarson: which branch are you on?
+aaroncarson: (one will be starred)
+jessica: master
+aaroncarson: ok
+aaroncarson: I thought so
+jessica: it's the only one I have
+aaroncarson: time to make a new branch
+aaroncarson: type: git branch JessBranch
+aaroncarson: ro soemthing like that
+aaroncarson: or something like that
+aaroncarson: that makes a new branch
+aaroncarson: then, if you type: git checkout JessBranch
+jessica: done
+aaroncarson: it will check out the new branch
+aaroncarson: so if you type: git branch
+aaroncarson: you will see you have changed
+aaroncarson: then, please edit the file again.
+jessica: it gave me confirmation
+aaroncarson: Seems silly, but the branching parts are helpful
+aaroncarson: That is good
+aaroncarson: but I wanted the edit in a branch, so I can try to do a merge thing on the website eventually
+aaroncarson: so jsut make another edit now
+jessica: done
+aaroncarson: ok, then do the add and commit commands again
+jessica: oops. forgot the add before the commit
+aaroncarson: thats ok
+aaroncarson: I forgot that -a does the add
+aaroncarson: sometimes
+jessica: k
+aaroncarson: so did it give you the confirmation
+jessica: yep
+aaroncarson: ok, we’r egetting close
+aaroncarson: what is the name of your branch
+jessica: JessBranch
+aaroncarson: ok, try this command (one sec)
+aaroncarson: git push origin master
+jessica: it's asking for a user name. mine or yours?
+aaroncarson: yours that you signed up for github with
+jessica: done
+aaroncarson: did it seem to work?  I’ll check the site … I’m trying to figure out how to get your updates
+jessica: yep long confirmation message
+aaroncarson: ok, cool, I see your changes
+jessica: yay!
+aaroncarson: So this is clunky, and I’ll try to understand more of what is happening, but at least I saw stuff.
+aaroncarson: I think you somehow committed your custom branch into the master branch of the site.
+aaroncarson: Not sure how
+aaroncarson: but oh well
+jessica: I'm not sure how either...
+jessica: is it the -m?
+aaroncarson: -m lets you pass a string as the label, instead of using vim
+aaroncarson: don’t use vim, it sucks
+jessica: I did push origin master... Ethan did merge eariler
+aaroncarson: You do the merge to merge your local branch with your master branch
+aaroncarson: that is ok if you use git only locally, but ideally master is what the remote repository looks like
+aaroncarson: every time you make a change you want to upload to the server, you should start a new branch
+aaroncarson: and edit there
+jessica: no I never had a merge command
+jessica: oh, I see what you're saying
+aaroncarson: so, you can do the merge if you want, or just delete the extra branch with git branch -d JessBranch
+aaroncarson: then you can get the updated version on github somehow ...
+aaroncarson: oh, I know how
+aaroncarson: if you didn’t delete your branch, do: git merge JessBranch
+jessica: so it would be good to delete it now, so that it doesn't interfere with anything later, right?
+aaroncarson: stop a sec
+aaroncarson: try the merge command I posted
+aaroncarson: sry
+jessica: k
+aaroncarson: this is wierd
+aaroncarson: chatting and all
+jessica: says it's already up todate
+aaroncarson: ok, so do: git checkout master
+aaroncarson: then run update
+jessica: but both show up with git branch
+aaroncarson: sorry,
+aaroncarson: not update
+aaroncarson: swith to master with git checkout master
+aaroncarson: then do the merge
+jessica: how do I swich?
+aaroncarson: git checkout master
+aaroncarson: that switches your branch
+aaroncarson: it actually changes what files you will see with ls
+aaroncarson: etc
+jessica: got it
+aaroncarson: so after switching, do the merge
+jessica: git merge master?
+aaroncarson: no
+aaroncarson: git merge JessBranch
+aaroncarson: I think
+aaroncarson: if that doesn’t work, try the other one
+jessica: k, updating confirmation message
+aaroncarson: did that work
+jessica: yep
+aaroncarson: ok, so now delete your branch
+aaroncarson: with: git branch -d JessBranch
+jessica: done
+aaroncarson: ok, almost done
+aaroncarson: lastly, do: git pull
+aaroncarson: that will grab the latest version from the server
+jessica: um... okay...
+aaroncarson: It should say something was updated, I changed the file
+aaroncarson: a file just cuz
+aaroncarson: you don’t have to do that
+aaroncarson: unless you want to make sure you’re up to date
+aaroncarson: I just want to know if it works for you
+jessica: wish I could send you a screen shot
+aaroncarson: no good
+aaroncarson: put it in an email
+aaroncarson: if you need to know how, you can read this http://community.linuxmint.com/software/view/shutter
+aaroncarson: Mint should have shutter, a screenshot application, in your start menu
+jessica: got it. Print scrn works well in Mint 
+aaroncarson: Thats good
+jessica: the message in my terminal?
+aaroncarson: ok i see it
+aaroncarson: you have opened vim.
+aaroncarson: vim is annoying, but we can fix it
+jessica: I'm having flash backs to 1983
+aaroncarson: pretty much
+aaroncarson: can you use the arrow keys to move a cursor around?
+jessica: yes
+aaroncarson: press escape
+aaroncarson: then :
+jessica: nothing
+aaroncarson: try :q
+jessica: The bottom says ^X for exit?
+aaroncarson: esc + : + q + enter
+aaroncarson: try that.  ^ is command
+aaroncarson: sorry, control
+aaroncarson: or alt, I can’t remember
+aaroncarson: OH you were in NANO
+aaroncarson: not VIM
+jessica: save modified buffer (answering no will destroy changes)
+aaroncarson: yes
+aaroncarson: type yes
+aaroncarson: well, either I guess
+aaroncarson: any luck
+jessica: UGH>>>>>>>>
+jessica: File Name to Write: /home/jessica/code/OpenDoor/.git/MERGE_MSG                 
+jessica: ^G Get Help        M-D DOS Format      M-A Append          M-B Backup File
+jessica: ^C Cancel          M-M Mac Format      M-P Prepend
+aaroncarson: try control + c
+aaroncarson: or, just close the terminal
+jessica: k
+aaroncarson: Sometimes, I can’t figure it out either
+aaroncarson: the tools are so strange
+jessica: um, k, back to a regular terminal
+jessica: back into opendoor
+aaroncarson: so, do you know what command gave you that mess
+jessica: pull something
+aaroncarson: really?  Wierd
+jessica: git pull
+aaroncarson: instead of that,
+jessica: yep
+aaroncarson: lets try another similar one ...
+aaroncarson: git pull origin master
+aaroncarson: hmm, actually I dont think that will work
+jessica: form OpenDoor, or should I be somewhere else?
+aaroncarson: sorry
+aaroncarson: git pull origin
+aaroncarson: that worked fo rme
+aaroncarson: for me
+jessica: from OpenDoor or master?
+aaroncarson: i don’t understand your question, is it prompting you?
+jessica: no, what directory?
+aaroncarson: oh
+jessica: I cd'd back to OpenDoor, am I far enough in?
+aaroncarson: yes, just go to OpenDoor
+aaroncarson: then do git pull origin
+jessica: error local changes to README would be overwritten by merge
+jessica: please commit changes or stash them before merge
+jessica: aborting.
+aaroncarson: lol
+aaroncarson: I don’t know
+aaroncarson: run: git commit -a -m “”
+jessica: oops for got "" that was a long message!
+jessica: k, done
+jessica: Merge branch master????
+aaroncarson: umm, sure, if you need to
+jessica: [master 13ed2e6] Merge branch 'master' of https://github.com/aaroncarsonart/OpenDoor
+jessica:  1 file changed, 1 insertion(+)
+aaroncarson: I think you only have one branch though.  Didn’t we delete your other branch?
+aaroncarson: if you do: git branch
+aaroncarson: how many
+jessica: yeah. it kind of looks like a confirmation message
+jessica: just *master
+aaroncarson: good
+aaroncarson: try: git pull origin master
+jessica: damn it!
+jessica: Back to the bad screen
+aaroncarson: ok, close the term and go back to opendoor
+aaroncarson: not sure why it’s doing that ...
+aaroncarson: I did git on my 2nd computer and am running commands like you all have been,
+jessica: It tells me I need to write a message, but I don't see a way out of the page
+aaroncarson: I know, it shouldn’t do that
+aaroncarson: one more idea: we can check the server with: git remote -v
+aaroncarson: what does it say
+jessica: DOS format
+jessica: hahahah!
+aaroncarson: what?
+aaroncarson: lol, i think something is not right
+jessica: oh! Hit enter in the right magical space??
+jessica: Looks like whatever I did worked
+aaroncarson: ok.  did it say …
+aaroncarson: remote: Counting objects: 3, done.
+aaroncarson: remote: Compressing objects: 100% (3/3), done.
+aaroncarson: remote: Total 3 (delta 1), reused 0 (delta 0)
+aaroncarson: Unpacking objects: 100% (3/3), done.
+aaroncarson: From https://github.com/aaroncarsonart/OpenDoor
+aaroncarson:   7118b5d..9db855b  master    -> origin/master
+aaroncarson: Updating 7118b5d..9db855b
+aaroncarson: Fast-forward
+aaroncarson:  README.md | 1 +
+aaroncarson:  1 file changed, 1 insertion(+)
+aaroncarson: or such
+jessica: no
+aaroncarson: are you typing pull, or push
+aaroncarson: because it sounds like a push
+aaroncarson: but it should be a pull
+jessica: jessica@jessica-Yoga ~/code/OpenDoor $ git pull origin master
+jessica: From https://github.com/aaroncarsonart/OpenDoor
+jessica:  * branch            master    -> FETCH_HEAD
+jessica: Merge made by the 'recursive' strategy.
+aaroncarson: wierd
+aaroncarson: just because, try: get pull origin
+jessica: I have no idea
+aaroncarson: If you need to get going, I understand, I’m not trying to keep you.  I’m gonna be up for a while on homework
+aaroncarson: I’m not trying to boss you around, just trying to figure this stuff out
+jessica: "Already  up to date"
+jessica: No worries
+aaroncarson: well, apparently it worked.
+jessica: I think so
+aaroncarson: I think this is probably enough work for one night.  I hope you’re benefiting from this, I think I’m learning more about how this whole system worked.
+jessica: the message before said merge made by the recursive strategy
+jessica: yes, this is good!
+aaroncarson: I know, I was wondering about that
+aaroncarson: I didn’t get that part
+aaroncarson: there’s a bunch of varieties of git pull
+aaroncarson: git pull
+jessica: Especially after my kids quit having melt downs with phones, lol
+aaroncarson: git pull -U
+aaroncarson: get pull origin
+aaroncarson: git pull master
+aaroncarson: sorry
+aaroncarson: git pull origin master
+aaroncarson: I think the “master” can be replaced with a different branch too, if one exists
+jessica: it happens, usually at the worst time 
+aaroncarson: something to try to figure out later
+aaroncarson: yeah, I remember you saying that
+aaroncarson: I don’t know anything about Iphones
+jessica: now she's busy reloading all her apps, lol
+aaroncarson: So, when you uploaded the chat log, did you remove the timestamps?
+aaroncarson: I will upload this one, just thinking about my strategy
+jessica: I can copy and it excludes the time stamps
+jessica: Oh, the last one? Yes
+aaroncarson: Really?  I wish I could do that
+jessica: it was a pain, that one was on windows.
+jessica: The chat on Mint when I copy and paste it excludes the time stamps
+aaroncarson: oh hey, I can hide the timestamp!
+aaroncarson: cool
+jessica: I could make a google doc and copy and paste what I have to save you some work
+jessica: nice! Did that work?
+aaroncarson: yes, nice and simple
+aaroncarson: Alright, I got the log
+jessica: Cool 
