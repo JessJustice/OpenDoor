@@ -53,7 +53,7 @@ General GNU/Linux Knowledge
 --------------------------------------------------------------------------------
 Here is a place to share all general information concerning how to use linux distros like Ubuntu or Mint that we think may benefit other team members.
 
-#terminal keyboard shortcuts
+### terminal keyboard shortcuts
 Shortcut                    	|Result
 |:-----------------------------	|:----------------------------------------------
 `ctrl + alt + t`		|Open a new terminal window
