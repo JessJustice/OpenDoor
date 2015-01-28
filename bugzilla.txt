@@ -1,0 +1,6 @@
+Wanting to contribute to: https://bugzilla.mozilla.org/show_bug.cgi?id=1126290
+asked a question:   (IRC: irc.mozilla.org #bugzilla)
+
+aaroncarson: Hi, I have never contributed to fixing a bug before.  How do I get assigned a “good first bug”?  Is there a way I can claim it?
+
+awaiting a response ...
